@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UEP Simplex | Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="glass-card header-row">
+    <div class="logo-section">
+      <img src="images/ueplogo.png" alt="UEP Logo" class="logo-img">
+    </div>
+
+    <div class="title-center">
+      <h1>Simplex Method Calculator</h1>
+      <p class="subtitle">University of Eastern Philippines</p>
+    </div>
+
+    <div class="header-controls">
+      <img src="images/cslogo.png" alt="Logo" class="logo-toggle">
+      <label class="theme-toggle" title="Toggle theme">
+        <input type="checkbox" class="theme-switch">
+        <span class="slider"></span>
+      </label>
+  
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Carousel -->
+  <div class="carousel-container">
+    <div class="carousel-slide fade">
+      <img class="carousel-img" src="images/acad-front.jpg" alt="Campus front">
+      <div class="slide-caption">Welcome to the Simplex Solver</div>
+    </div>
+    <div class="carousel-slide fade">
+      <img class="carousel-img" src="images/acsa.jpg" alt="UEP Logo">
+      <div class="slide-caption">Step-by-step Tableau Visualization</div>
+    </div>
+    <div class="carousel-slide fade">
+      <img class="carousel-img" src="images/uep-droneview.jpg" alt="College seal">
+      <div class="slide-caption">Master Linear Programming</div>
+    </div>
+  </div>
+  <!-- Side drawer (hidden by default) -->
+  <aside class="side-drawer" id="side-drawer" aria-hidden="true">
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="calculator.html" class="drawer-link">Calculator</a>
+      <a href="modules.html" class="drawer-link">Modules</a>
+      <a href="team.html" class="drawer-link">Team</a>
+      <a href="about.html" class="drawer-link">About</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay when drawer open -->
+  <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+
+  
+  <!-- Hero -->
+  <main>
+    <section class="glass-card hero-card">
+      <h2>“Optimization begins with understanding.”</h2>
+      <p class="muted" style="max-width:820px;margin:0 auto 1rem;">
+        The Simplex Method is a powerful algorithm for solving linear programming problems.
+        Use this interactive solver to visualize tableau transitions, pivot operations, and
+        reach optimal solutions for resource allocation, production planning, and more.
+      </p>
+
+      <div style="margin-top:18px;">
+        <a href="calculator.html" class="glass-btn primary large">Start Solving Now →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass-card footer-row">
+    <small>University of Eastern Philippines • Simplex Method Calculator • © <span id="year"></span></small>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

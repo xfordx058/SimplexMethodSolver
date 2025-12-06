@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UEP Simplex | Solver</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="glass-card header-row">
+    <div class="logo-section">
+      <img src="images/ueplogo.png" alt="UEP Logo" class="logo-img">
+    </div>
+
+    <div class="title-center">
+      <h1>Simplex Calculator</h1>
+      <p class="subtitle">Step-by-step tableau solver</p>
+    </div>
+
+    <div class="header-controls">
+      <img src="images/cslogo.png" alt="Logo" class="logo-toggle">
+      <label class="theme-toggle" title="Toggle theme">
+        <input type="checkbox" class="theme-switch">
+        <span class="slider"></span>
+      </label>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Side drawer (hidden by default) -->
+  <aside class="side-drawer" id="side-drawer" aria-hidden="true">
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="calculator.html" class="drawer-link">Calculator</a>
+      <a href="modules.html" class="drawer-link">Modules</a>
+      <a href="team.html" class="drawer-link">Team</a>
+      <a href="about.html" class="drawer-link">About</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay when drawer open -->
+  <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+
+  <!-- Main layout: form (left) and output (right) -->
+  <main>
+    <!-- Form section -->
+    <section class="glass-card form-section" style="max-width:760px;margin:1rem;">
+      <h2>Problem Input</h2>
+      <label class="sr-only" for="objective">Objective function</label>
+      <input id="objective" class="glass-input" type="text" placeholder="e.g., 1.5x + 1.2y" value="1.5x + 1.2y">
+
+      <div id="constraints-container" aria-live="polite">
+        <!-- Default constraint rows (solver.js reset expects these) -->
+        <div class="constraint-row">
+          <input type="text" class="glass-input constraint-input" placeholder="e.g., 2x + 3y" value="2x + 3y">
+          <select class="glass-select constraint-select" aria-label="Inequality">
+            <option value="<=" selected>&lt;=</option>
+            <option value=">=">&gt;=</option>
+            <option value="=">=</option>
+          </select>
+          <input type="text" class="glass-input constraint-rhs" placeholder="RHS" value="24">
+        </div>
+
+        <div class="constraint-row">
+          <input type="text" class="glass-input constraint-input" placeholder="e.g., 6x + 3y" value="6x + 3y">
+          <select class="glass-select constraint-select" aria-label="Inequality">
+            <option value="<=" selected>&lt;=</option>
+            <option value=">=">&gt;=</option>
+            <option value="=">=</option>
+          </select>
+          <input type="text" class="glass-input constraint-rhs" placeholder="RHS" value="48">
+        </div>
+      </div>
+
+      <div class="buttons" style="margin-top:12px;">
+        <button id="add-constraint" class="glass-btn">+ Add Constraint</button>
+        <button id="reset-btn" class="glass-btn secondary">Reset</button>
+        <button id="solve-btn" class="glass-btn primary">Solve</button>
+      </div>
+    </section>
+
+    <!-- Output section -->
+    <aside class="glass-card output-section" style="max-width:760px;margin:1rem;">
+      <h2>Results</h2>
+      <div id="output-section" class="output-placeholder">
+        <p class="placeholder">Results will appear here after solving.</p>
+      </div>
+
+      <div id="solution-steps" class="solution-steps" style="margin-top:12px;">
+        <!-- solver.js will populate collapsible steps here -->
+      </div>
+    </aside>
+  </main>
+
+  <footer class="glass-card footer-row">
+    <small>University of Eastern Philippines • Simplex Method Calculator • © <span id="year"></span></small>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <!-- Include your solver.js (must be placed in js/solver.js) -->
+  <script src="js/solver.js"></script>
+</body>
+</html>
