@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UEP Simplex | About</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="glass-card header-row">
+    <div class="logo-section">
+      <img src="images/ueplogo.png" alt="UEP Logo" class="logo-img">
+    </div>
+
+    <div class="title-center">
+      <h1>About the System</h1>
+      <p class="subtitle">Overview, objectives, and how to use the solver</p>
+    </div>
+
+    <div class="header-controls">
+      <img src="images/cslogo.png" alt="Logo" class="logo-toggle">
+      <label class="theme-toggle" title="Toggle theme">
+        <input type="checkbox" class="theme-switch">
+        <span class="slider"></span>
+      </label>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Side drawer (hidden by default) -->
+  <aside class="side-drawer" id="side-drawer" aria-hidden="true">
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="calculator.html" class="drawer-link">Calculator</a>
+      <a href="modules.html" class="drawer-link">Modules</a>
+      <a href="team.html" class="drawer-link">Team</a>
+      <a href="about.html" class="drawer-link">About</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay when drawer open -->
+  <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+
+  <main>
+    <section style="max-width:1100px;margin:1rem auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;">
+      <div class="glass-card">
+        <h3>System Overview</h3>
+        <p>
+          The Simplex Method Calculator is an educational web application that walks users through
+          linear programming problems using the Simplex algorithm. It visualizes tableau transformations,
+          pivot choices, and produces the final optimal solution for maximization problems.
+        </p>
+        <p style="color:var(--muted);margin-top:8px;">
+          This system is intended for students, instructors, and researchers who want a clear, interactive
+          way to study and demonstrate linear programming.
+        </p>
+      </div>
+
+      <div class="glass-card">
+        <h3>Objectives</h3>
+        <ul>
+          <li>Provide interactive LP solving</li>
+          <li>Show step-by-step tableau visuals</li>
+          <li>Help students with downloadable notes</li>
+          <li>Work offline and maintain a beautiful UI</li>
+        </ul>
+      </div>
+
+      <div class="glass-card">
+        <h3>System Features</h3>
+        <ul>
+          <li>✔ Step-by-step tableau</li>
+          <li>✔ Auto pivot detection</li>
+          <li>✔ Dark/light mode</li>
+          <li>✔ Offline capable</li>
+          <li>✔ Modules & notes</li>
+          <li>✔ Student team</li>
+          <li>✔ Responsive design</li>
+        </ul>
+      </div>
+
+      <div class="glass-card">
+        <h3>Technologies Used</h3>
+        <p>HTML5 • CSS3 (Glassmorphism + Animations) • JavaScript • solver.js • LocalStorage</p>
+
+        <h4 style="margin-top:12px;">System Flow</h4>
+        <div style="padding:10px;border-radius:8px;background:var(--glass-bg);color:var(--muted);">
+          [User Input] → [solver.js] → [Tableaus] → [Final Solution]
+        </div>
+      </div>
+
+      <div class="glass-card" style="grid-column:1/-1;">
+        <h3>How to Use</h3>
+        <ol>
+          <li>Enter the objective function (e.g., <code>1.5x + 1.2y</code>).</li>
+          <li>Add constraints and set RHS values.</li>
+          <li>Click <strong>Solve</strong> to see step-by-step tableaus.</li>
+          <li>Download module notes for study.</li>
+          <li>Switch themes with the toggle in the header.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass-card footer-row">
+    <small>University of Eastern Philippines • Simplex Method Calculator • © <span id="year"></span></small>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

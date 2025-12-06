@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UEP Simplex | Team</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="glass-card header-row">
+    <div class="logo-section">
+      <img src="images/ueplogo.png" alt="UEP Logo" class="logo-img">
+    </div>
+
+    <div class="title-center">
+      <h1>Student Development Team</h1>
+      <p class="subtitle">Meet the contributors</p>
+    </div>
+
+    <div class="header-controls">
+      <img src="images/cslogo.png" alt="Logo" class="logo-toggle">
+      <label class="theme-toggle" title="Toggle theme">
+        <input type="checkbox" class="theme-switch">
+        <span class="slider"></span>
+      </label>
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Side drawer (hidden by default) -->
+  <aside class="side-drawer" id="side-drawer" aria-hidden="true">
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link">Home</a>
+      <a href="calculator.html" class="drawer-link">Calculator</a>
+      <a href="modules.html" class="drawer-link">Modules</a>
+      <a href="team.html" class="drawer-link">Team</a>
+      <a href="about.html" class="drawer-link">About</a>
+    </nav>
+  </aside>
+
+  <!-- Overlay when drawer open -->
+  <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+
+  <main>
+    <section class="card-grid" style="max-width:1100px;margin:1rem auto;">
+      <div class="glass-card">
+        <img src="images/junel.png" alt="Team Leader">
+        <h3>Junel</h3>
+        <p style="color:var(--muted)">Team Leader | project coordination & domain lead.</p>
+      </div>
+
+      <div class="glass-card">
+        <img src="img/student2.png" alt="Programmer">
+        <h3>Name 2</h3>
+        <p style="color:var(--muted)">Programmer | JavaScript & solver integration.</p>
+      </div>
+
+      <div class="glass-card">
+        <img src="img/student3.png" alt="UI/UX Designer">
+        <h3>Name 3</h3>
+        <p style="color:var(--muted)">UI/UX Designer | design & accessibility.</p>
+      </div>
+
+      <div class="glass-card">
+        <img src="img/student4.png" alt="Doc Writer">
+        <h3>Name 4</h3>
+        <p style="color:var(--muted)">Documentation Writer | notes & help content.</p>
+      </div>
+
+      <div class="glass-card">
+        <img src="img/student5.png" alt="Researcher">
+        <h3>Name 5</h3>
+        <p style="color:var(--muted)">Researcher | algorithm validation and tests.</p>
+      </div>
+
+      <div class="glass-card">
+        <img src="img/student6.png" alt="Quality Tester">
+        <h3>Name 6</h3>
+        <p style="color:var(--muted)">Quality Tester | testing & edge cases.</p>
+      </div>
+
+      <div class="glass-card">
+        <img src="img/student7.png" alt="Quality Tester">
+        <h3>Name 7</h3>
+        <p style="color:var(--muted)">Quality Tester | user feedback & bug reporting.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="glass-card footer-row">
+    <small>University of Eastern Philippines • Simplex Method Calculator • © <span id="year"></span></small>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
