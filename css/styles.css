@@ -1219,8 +1219,9 @@ body {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: start;
+    width: 100%;
 }
 
 /* Card images: consistent sizing and cover behavior */
@@ -1236,30 +1237,123 @@ body {
 /* Slightly more rounded card containers when used in grids */
 .card-grid .glass-card {
     border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-/* Make the card grid collapse into a 2-column/1-column layout on small screens */
+/* Card grid on tablet (768px) */
 @media (max-width: 768px) {
     .card-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .card-grid .glass-card {
+        padding: 1rem;
+    }
+
+    .card-grid img {
+        height: 130px;
     }
 }
 
+/* Card grid on large phones (480px - 768px) */
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        padding: 0.5rem;
+    }
+
+    .card-grid .glass-card {
+        padding: 0.9rem;
+        margin: 0;
+        border-radius: 14px;
+    }
+
+    .card-grid h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-grid p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+    .card-grid img {
+        height: 110px;
+        border-radius: 10px;
+        margin-bottom: 0.6rem;
+    }
+}
+
+/* Card grid on small phones (max 480px) */
 @media (max-width: 480px) {
     .card-grid {
         grid-template-columns: 1fr;
         gap: 0.75rem;
+        padding: 0.5rem;
     }
 
     .card-grid .glass-card {
         padding: 0.85rem;
         margin: 0;
+        border-radius: 12px;
+    }
+
+    .card-grid h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+        line-height: 1.3;
+    }
+
+    .card-grid p {
+        font-size: 0.8rem;
+        line-height: 1.3;
     }
 
     .card-grid img {
-        height: 120px;
+        height: 100px;
         object-fit: cover;
         border-radius: 8px;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-grid a.glass-btn {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+        min-height: 40px;
+    }
+}
+
+/* Extra small phones (max 360px) */
+@media (max-width: 360px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+        gap: 0.6rem;
+        padding: 0.4rem;
+    }
+
+    .card-grid .glass-card {
+        padding: 0.75rem;
+        border-radius: 10px;
+    }
+
+    .card-grid h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .card-grid p {
+        font-size: 0.75rem;
+    }
+
+    .card-grid img {
+        height: 90px;
+        border-radius: 6px;
+        margin-bottom: 0.4rem;
     }
 }
