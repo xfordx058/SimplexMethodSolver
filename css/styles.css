@@ -596,9 +596,9 @@ main {
     justify-content: center;
 }
 
-.slide-content {
-    /* image slides: cover images and captions */
-}
+/* .slide-content {
+    image slides: cover images and captions
+} */
 
 .carousel-img {
     width: 100%;
@@ -1462,5 +1462,169 @@ body {
 
     .about-grid-full {
         grid-column: 1 / -1;
+    }
+}
+
+/* =================================================================
+   SIMPLE TEAM CARD & LAYOUT STYLES (Flat Design - Clean Structure)
+   ================================================================= */
+
+/* --- Grid Layout for Team Cards --- */
+.team-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; /* Reduced gap for simplicity */
+    max-width: 1000px; /* Reduced max width */
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* --- 🌟 Simple Team Card Design --- */
+.team-card {
+    /* Basic, Solid Background and Border (No Glassmorphism) */
+    background: #ffffff; 
+    border: 1px solid #ddd; /* Simple light border */
+    border-radius: 10px; /* Standard rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Basic shadow */
+    padding: 1.5rem 1.2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    /* Simplified Transition */
+    transition: all 0.2s ease-in-out;
+    will-change: transform, box-shadow;
+}
+
+/* --- Hover/Animation Effects (Minimal Lift) --- */
+.team-card:hover {
+    /* Simple Hover Lift Animation */
+    transform: translateY(-4px); 
+    /* Slightly stronger shadow on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Avatar Styling (Circular) --- */
+.avatar-container {
+    width: 110px; /* Simplified size */
+    height: 110px;
+    margin: 0 auto 1rem;
+    border-radius: 50%; /* Circular avatar */
+    overflow: hidden;
+    position: relative;
+    
+    /* REMOVED: Colored ring/shadow. Using simple border for definition. */
+    border: 3px solid #eee; 
+    transition: none; /* Removed transition */
+}
+
+.team-card:hover .avatar-container {
+    /* Simple border change on hover */
+    border-color: #ccc; 
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Removed image zoom transition */
+    transform: scale(1);
+    transition: none;
+}
+
+/* --- Card Content and Typography --- */
+.card-content h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+    font-size: 1.4rem;
+    color: #333; /* Hardcoded dark color */
+    transition: none;
+}
+
+.role-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #666; /* Hardcoded muted color */
+    margin-bottom: 0.5rem;
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #888; /* Hardcoded muted color */
+    margin-bottom: 1rem;
+    transition: none;
+}
+
+/* --- 💡 SKILLS/SPECIALIZATION BADGES --- */
+.skills-badges {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; 
+    margin-top: 0.75rem;
+    flex-wrap: wrap; 
+}
+
+.skills-badges a,
+.skills-badges span {
+    color: #444; 
+    font-size: 1rem; 
+    width: 32px; 
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px; 
+    border: 1px solid #eee; 
+    background: #f8f8f8; /* Simple light background */
+    transition: all 0.2s ease-out;
+    cursor: default;
+}
+
+/* Hover/Focus effect for Skills Badges - simple color change */
+.skills-badges a:hover,
+.skills-badges span:hover {
+    color: #007bff; /* Example accent color */
+    background-color: #eef; 
+    border-color: #007bff;
+    transform: none; 
+    box-shadow: none;
+}
+
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .team-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .team-card {
+        padding: 1.2rem 0.8rem;
+    }
+
+    .avatar-container {
+        width: 90px;
+        height: 90px;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .role-title, .quote-text {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid-container {
+        grid-template-columns: 1fr;
     }
 }
