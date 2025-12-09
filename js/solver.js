@@ -247,27 +247,6 @@ function performSimplex(objective, constraints) {
     let pivotRow = -1;
     let minRatio = Infinity;
 
-    // for (let i = 0; i < tableau.length - 1; i++) {
-    //   const pivotVal = tableau[i][pivotCol];
-    //   if (pivotVal > 0) {
-    //     const ratio = tableau[i][tableau[i].length - 1] / pivotVal;
-    //     ratios.push({
-    //       value: ratio,
-    //       text: `${formatNumber(
-    //         tableau[i][tableau[i].length - 1]
-    //       )} ÷ ${formatNumber(pivotVal)} = ${formatNumber(ratio)}`,
-    //       isMin: false,
-    //     });
-
-    //     if (ratio < minRatio) {
-    //       minRatio = ratio;
-    //       pivotRow = i;
-    //     }
-    //   } else {
-    //     ratios.push(null);
-    //   }
-    // }
-
       for (let i = 0; i < tableau.length - 1; i++) {
       const pivotVal = tableau[i][pivotCol];
       if (pivotVal > 0) {
